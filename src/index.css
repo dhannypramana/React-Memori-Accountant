@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply bg-slate-100 font-quicksand
+}
+
+.button {
+  @apply bg-sky-500 text-white px-5 py-2 rounded-lg shadow-lg
+}
+
+.form-field {
+  @apply mt-2 w-full rounded shadow border border-slate-300 p-2 focus:border-pink-800
+}
