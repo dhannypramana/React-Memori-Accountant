@@ -9,9 +9,17 @@ html {
 }
 
 .button {
-  @apply bg-sky-500 text-white px-5 py-2 rounded-lg shadow-lg
+  @apply bg-sky-500 text-white px-5 py-2 rounded-lg shadow-lg hover:bg-sky-600 transition ease-in-out duration-200 active:ring-1 active:ring-sky-400
+}
+
+.button-danger {
+  @apply bg-red-500 text-white px-5 py-2 rounded-lg shadow-lg hover:bg-red-600 transition ease-in-out duration-200 active:ring-1 active:ring-sky-400
+}
+
+.button-warning {
+  @apply bg-yellow-500 text-white px-5 py-2 rounded-lg shadow-lg hover:bg-yellow-600 transition ease-in-out duration-200 active:ring-1 active:ring-sky-400
 }
 
 .form-field {
-  @apply mt-2 w-full rounded shadow border border-slate-300 p-2 focus:border-pink-800
+  @apply mt-2 w-full rounded shadow border border-slate-300 p-2 focus:border-pink-800 transition ease-in-out duration-300
 }

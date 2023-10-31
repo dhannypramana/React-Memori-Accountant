@@ -1,31 +1,40 @@
 import Swal from "sweetalert2";
 
-const Custom = (title, html) => {
+const Toast = (title, icon = "success") => {
+  Swal.fire({
+    toast: true,
+    position: 'top-right',
+    showConfirmButton: false,
+    timer: 1750,
+    timerProgressBar: true,
+    title,
+    icon
+  })
+}
+
+const Confirm = (title, text) => {
   return new Promise((resolve, reject) => {
     Swal.fire({
       title,
-      width: '800px',
-      showConfirmButton: true,
+      text,
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#0ea5e9',
-      cancelButtonColor: '#dc2626',
-      confirmButtonText: 'Submit',
-      html,
-    }).then(res => {
-      if (res.isConfirmed) {
-        resolve(res)
-      }
-    }).catch(e => {
-      reject(e)
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Submit!'
     })
-  });
-}
-
-const Toast = (msg) => {
-  Swal.fire(msg)
+      .then(result => {
+        if (result.isConfirmed) {
+          resolve(result)
+        }
+      })
+      .catch(e => {
+        reject(e)
+      })
+  })
 }
 
 export {
-  Custom,
+  Confirm,
   Toast
 }
